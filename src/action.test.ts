@@ -68,7 +68,7 @@ describe("action", () => {
       expect(process.exitCode).toBeFalsy();
     } catch (e) {
       console.log(e);
-      throw new Error("failed");
+      throw new Error("failed", { cause: e });
     }
   });
 
@@ -98,7 +98,7 @@ describe("action", () => {
       expect(process.exitCode).toBeFalsy();
     } catch (e) {
       console.log(e);
-      throw new Error("failed");
+      throw new Error("failed", { cause: e });
     }
   });
 });
